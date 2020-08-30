@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem"
+    android:layout_margin="@dimen/small_margin"
+    android:background="@drawable/block">
+
+    <TextView style="@style/TitleText"
+        android:id="@+id/tvQuestion"
+        android:layout_margin="@dimen/margin"
+        tools:text="Question"/>
+
+</LinearLayout>

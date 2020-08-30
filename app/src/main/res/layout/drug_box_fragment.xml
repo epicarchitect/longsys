@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:padding="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:padding="@dimen/small_margin"
+            app:srcCompat="@drawable/ic_back"/>
+
+        <TextView android:id="@+id/tvTitle"
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Title"/>
+
+    </LinearLayout>
+
+    <FrameLayout style="@style/FrameLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="85dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/analyse_group_item"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/FAB"/>
+
+    </FrameLayout>
+
+</LinearLayout>

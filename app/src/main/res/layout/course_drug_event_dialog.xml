@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout">
+
+    <TextView style="@style/TitleText"
+        android:id="@+id/tvTitle"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="Title"/>
+
+    <TextView
+        style="@style/TitleText"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textColor="@color/green"
+        android:id="@+id/tvDone"
+        android:visibility="gone"
+        android:text="Препарат принят" />
+
+    <TextView
+        style="@style/TitleText"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textColor="@color/red"
+        android:id="@+id/tvNotDone"
+        android:visibility="gone"
+        android:text="Препарат не принят" />
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView android:layout_marginTop="@dimen/margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Время приема"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonTime"
+                android:layout_marginTop="@dimen/margin"
+                style="@style/BlueButton"
+                android:text="10:30"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView android:layout_marginTop="@dimen/margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дата приема"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonDate"
+                style="@style/BlueButton"
+                android:layout_marginTop="@dimen/margin"
+                android:text="2 april 2020"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:id="@+id/etCountLayout"
+        android:hint="Дозировка"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etCount"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/GreenButton"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/big_margin"
+        android:id="@+id/buttonDone"
+        android:text="Препарат принят" />
+
+</LinearLayout>

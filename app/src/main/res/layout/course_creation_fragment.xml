@@ -1,0 +1,41 @@
+<LinearLayout style="@style/LinearLayout"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center">
+
+    <TextView style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:text="Дата начала курса"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/BlueButton"
+        android:id="@+id/buttonDateStart"
+        android:layout_gravity="center"
+        android:text="12 апр 2020"/>
+
+    <TextView style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:text="Дата окончания курса"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/BlueButton"
+        android:id="@+id/buttonDateEnd"
+        android:layout_gravity="center"
+        android:text="12 апр 2020"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/GreenButton"
+        android:id="@+id/buttonStart"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:text="Начать курс"/>
+
+</LinearLayout>

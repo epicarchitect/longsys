@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="analyse_group_0">Гормональные исследования</string>
+    <string name="analyse_group_1">Гематологические исследования</string>
+    <string name="analyse_group_2">Биохимические исследования</string>
+    <string name="analyse_group_3">Оценка состояния липидного профиля</string>
+    <string name="analyse_group_4">Оценка состояния печени</string>
+    <string name="analyse_group_5">Оценка состояния почек</string>
+    <string name="analyse_group_6">Оценка близости к диабету, или его наличие</string>
+
+    <string name="analyse_group_7">Оценка работы щитовидной железы</string>
+    <string name="analyse_group_7_desc">Анализ сдаётся при подозрении проблем со щитовидной железой</string>
+
+    <string name="analyse_group_8">Оценка интенсивности конвертации тестостерона в Дигидротестостерон</string>
+    <string name="analyse_group_8_desc">Анализ сдаётся при изначально очень низком ГСПГ</string>
+
+    <string name="analyse_group_9">Оценка состояния простаты</string>
+    <string name="analyse_group_9_desc">Анализ сдаётся при простатитах, или при наличии постоянной сидячей офисной работы</string>
+
+    <string name="analyse_group_10">Наличие стресса в организме, или перетренированности</string>
+    <string name="analyse_group_10_desc">Анализ сдаётся при наличии постоянного стресса, или перетренированности</string>
+
+
+</resources>

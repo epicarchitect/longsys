@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="longsys.bb35.extreme.bulk.max">
+
+    <uses-permission android:name="android.permission.ACTION_LOCKED_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="application.App"
+        android:theme="@style/Launcher">
+
+        <activity android:name="application.ui.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="application.ui.CourseDrugEventDialogActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/BlueLightDialog"/>
+
+        <activity android:name="application.ui.CourseAnalyseEventDialogActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/BlueLightDialog"/>
+
+        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.CurrentCourseDrugEventsNotifier"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.OnClickReceiver"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.DoneReceiver"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.PutOffReceiver"/>
+
+        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.before.CurrentCourseAnalyseEventsBeforeNotifier"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.CurrentCourseAnalyseEventsNotifier"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.OnClickReceiver"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.DoneReceiver"/>
+        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.PutOffReceiver"/>
+
+        <receiver
+            android:name="application.controllers.restarting.BootReceiver"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            tools:ignore="UnusedAttribute">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.REBOOT"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:id="@+id/buttonAboutRules"
+        android:background="@drawable/block"
+        android:elevation="2dp"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:padding="@dimen/margin"
+        android:stateListAnimator="@animator/on_click">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_info"
+            app:tint="?attr/colorSecondary"/>
+
+        <TextView style="@style/TitleText"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Правила сдачи анализов"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:padding="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:padding="@dimen/small_margin"
+            tools:visibility="visible"
+            app:srcCompat="@drawable/ic_back"/>
+
+        <TextView android:id="@+id/tvTitle"
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Title"/>
+
+    </LinearLayout>
+
+    <FrameLayout style="@style/FrameLayout">
+
+        <FrameLayout style="@style/FrameLayout"
+            android:id="@+id/groupsLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGroups"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="85dp"
+                android:clipToPadding="false"
+                tools:listitem="@layout/analyse_group_item"/>
+
+        </FrameLayout>
+
+        <FrameLayout style="@style/FrameLayout"
+            android:id="@+id/analysesLayout"
+            android:visibility="gone">
+
+            <androidx.core.widget.NestedScrollView
+                style="@style/ScrollView"
+                android:id="@+id/analysesScroll">
+
+                <LinearLayout style="@style/LinearLayout">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAnalyses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/analyse_group_item"/>
+
+                    <TextView
+                        android:id="@+id/tvNotMandatory"
+                        android:layout_margin="@dimen/margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Не обязательные"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAnalysesNotMandatory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="85dp"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/analyse_group_item"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            style="@style/FAB"/>
+
+    </FrameLayout>
+
+</LinearLayout>

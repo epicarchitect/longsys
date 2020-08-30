@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/LinearLayout">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etName"
+            android:inputType="textMultiLine"
+            android:hint="Название группы"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etDescription"
+            android:inputType="textMultiLine"
+            android:hint="Описание"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

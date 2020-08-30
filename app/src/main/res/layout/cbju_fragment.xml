@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollView">
+
+    <LinearLayout style="@style/LinearLayout">
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:hint="Ваш вес, кг">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextInputEditText"
+                    android:id="@+id/etWeight"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView style="@style/SecondaryText"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Коэффицент активности"/>
+
+            <Spinner android:id="@+id/activitySpinner"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView style="@style/SecondaryText"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Степень дефицита"/>
+
+            <Spinner android:id="@+id/deficitSpinner"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView  style="@style/SecondaryText"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Белок, г/кг"/>
+
+            <Spinner android:id="@+id/proteinsSpinner"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView style="@style/SecondaryText"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Жиры, г/кг"/>
+
+            <Spinner android:id="@+id/fatsSpinner"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView style="@style/SecondaryText"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вода, г/кг"/>
+
+            <Spinner android:id="@+id/waterSpinner"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/GreenButton"
+            android:text="Посчитать"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/big_margin"
+            android:id="@+id/buttonCalculate"/>
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Калорийность, ккал:"/>
+
+            <TextView android:id="@+id/tvCalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="12345"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Белок, грамм:"/>
+
+            <TextView android:id="@+id/tvProteins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="12345"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Жиры, грамм:"/>
+
+            <TextView android:id="@+id/tvFats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="12345"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Углеводы, грамм:"/>
+
+            <TextView android:id="@+id/tvCarbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="12345"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/HorizontalLinearLayout"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Вода, мл:"/>
+
+            <TextView android:id="@+id/tvWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="12345"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

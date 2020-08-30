@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FrameLayout">
+
+    <LinearLayout style="@style/LinearLayout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/courseNotCreatedLayout">
+
+        <TextView style="@style/TitleText"
+            android:gravity="center"
+            android:text="Текущий курс отсутствует"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/GreenButton"
+            android:id="@+id/buttonShowCreateCourse"
+            android:layout_margin="@dimen/margin"
+            android:text="Перейти к созданию курса"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/onEmptyLayout">
+
+        <TextView style="@style/TitleText"
+            android:gravity="center"
+            android:text="На сегодня нет событий"/>
+
+    </LinearLayout>
+
+    <FrameLayout style="@style/FrameLayout"
+        android:visibility="gone"
+        android:id="@+id/eventsLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEvents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/event_item"/>
+
+    </FrameLayout>
+
+</FrameLayout>

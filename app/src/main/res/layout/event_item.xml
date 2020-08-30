@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem"
+    android:layout_margin="@dimen/small_margin"
+    android:gravity="start|center"
+    android:padding="@dimen/margin"
+    android:background="@drawable/block">
+
+    <LinearLayout style="@style/HorizontalLinearLayout">
+
+        <TextView style="@style/TitleText"
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:textColor="?attr/colorAccent"
+            android:textSize="22sp"
+            tools:text="12:12"/>
+
+        <TextView style="@style/TitleText"
+            android:id="@+id/tvName"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_weight="1"
+            tools:text="Event Name"/>
+
+        <ImageView android:id="@+id/iconDone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_done"
+            android:tint="@color/green"/>
+
+    </LinearLayout>
+
+    <TextView style="@style/SecondaryText"
+        android:id="@+id/tvDescription"
+        tools:text="123"/>
+
+</LinearLayout>

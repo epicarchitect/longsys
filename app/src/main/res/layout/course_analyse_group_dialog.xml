@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etName"
+            android:hint="Название группы"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin">
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Время сдачи"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonTime"
+                android:layout_marginTop="@dimen/margin"
+                style="@style/BlueButton"
+                android:text="10:30"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дата сдачи"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonDate"
+                style="@style/BlueButton"
+                android:layout_marginTop="@dimen/margin"
+                android:text="2 april 2020"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

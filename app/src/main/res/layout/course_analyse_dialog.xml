@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout">
+
+    <Spinner android:id="@+id/spinnerGroup"
+        style="@style/Spinner"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/big_margin"/>
+
+    <Spinner android:id="@+id/spinnerType"
+        style="@style/Spinner"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/big_margin"/>
+
+    <TextView style="@style/SecondaryText"
+        android:id="@+id/tvDescription"
+        android:padding="@dimen/small_margin"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"/>
+
+    <!--<androidx.appcompat.widget.AppCompatButton
+        style="@style/GreenButton"
+        android:id="@+id/buttonAddAnalyse"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin"
+        android:text="Добавить тип анализа"/>-->
+
+    <CheckBox android:id="@+id/checkMandatory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="Обязательный анализ"/>
+
+</LinearLayout>

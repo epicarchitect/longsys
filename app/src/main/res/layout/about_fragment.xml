@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScrollView">
+
+    <LinearLayout style="@style/LinearLayout"
+        android:paddingStart="@dimen/margin"
+        android:paddingEnd="@dimen/margin">
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:text="@string/about_course_0" />
+
+        <TextView android:id="@+id/text1"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/about_course_1" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_2" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_3" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_4" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_5" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_6" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_7" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_8" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_9" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_10" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/about_course_11"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:text="@string/about_course_12" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/about_course_13" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_14" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_15" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_16" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_17" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_18" />
+
+        <TextView style="@style/SecondaryText"
+            android:id="@+id/text19"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_19" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_20" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/about_course_21" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_22" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_23" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_24" />
+
+        <TextView style="@style/SecondaryText"
+            android:id="@+id/text25"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_25" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_26" />
+
+        <TextView style="@style/SecondaryText"
+            android:id="@+id/text27"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_27" />
+
+        <TextView style="@style/SecondaryText"
+            android:id="@+id/text28"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_28" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/about_course_29" />
+
+    </LinearLayout>
+
+</ScrollView>

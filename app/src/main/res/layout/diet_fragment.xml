@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ScrollView">
+
+    <LinearLayout style="@style/LinearLayout"
+        android:paddingStart="@dimen/margin"
+        android:paddingEnd="@dimen/margin">
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_0" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_1" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_2" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_3" />
+
+        <TextView
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_4" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_5" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_6" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_7" />
+
+        <TextView
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_8" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_9" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_10" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_11" />
+
+        <TextView
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_12" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_13" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_14" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_15" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_16" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_17" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_18" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_19" />
+
+        <TextView
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_20" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_21" />
+
+        <TextView
+            android:layout_margin="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/diet_22" />
+
+        <TextView style="@style/SecondaryText"
+            android:layout_margin="@dimen/margin"
+            android:text="@string/diet_23" />
+
+    </LinearLayout>
+
+</ScrollView>

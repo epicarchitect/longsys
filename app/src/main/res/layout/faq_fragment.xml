@@ -1,0 +1,10 @@
+<FrameLayout style="@style/FrameLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView
+        style="@style/ScrollView"
+        android:paddingBottom="85dp"
+        android:clipToPadding="false"
+        android:id="@+id/rv"/>
+
+</FrameLayout>

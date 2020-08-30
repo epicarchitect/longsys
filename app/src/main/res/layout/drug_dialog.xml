@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etName"
+            android:hint="Название препарата"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etDescription"
+            android:inputType="textMultiLine"
+            android:hint="Описание"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout style="@style/HorizontalLinearLayout"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin">
+
+        <TextView style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="Единицы измерения:"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Spinner"
+            android:layout_marginEnd="@dimen/margin"
+            android:id="@+id/unitSpinner" />
+
+    </LinearLayout>
+
+</LinearLayout>

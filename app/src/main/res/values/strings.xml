@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Бодибилдинг \"Масса Экстрим\"</string>
+
+    <string name="my_course">Мой курс</string>
+    <string name="diet">Рекомендации по диете</string>
+    <string name="consultation">Консультация</string>
+    <string name="settings">Настройки</string>
+    <string name="light">Светлый</string>
+    <string name="dark">Темный</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="analyses">Анализы</string>
+    <string name="about_course">О курсе</string>
+    <string name="faq">Вопросы</string>
+    <string name="preparations">Препараты</string>
+    <string name="edit">Изменить</string>
+    <string name="plan">План</string>
+    <string name="my_courses">Мои курсы</string>
+    <string name="current">Текущий</string>
+    <string name="today">Сегодня</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="confirm_message">Вы уверены, что хотите это сделать?</string>
+
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScrollView">
+
+    <LinearLayout style="@style/LinearLayout">
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:padding="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp">
+
+            <LinearLayout style="@style/HorizontalLinearLayout"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/margin">
+
+                <LinearLayout style="@style/LinearLayout"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Начало курса"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonTimeStart"
+                        style="@style/BlueButton"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_gravity="center"
+                        tools:text="2 april"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/LinearLayout"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Конец курса"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonTimeEnd"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin"
+                        style="@style/BlueButton"
+                        tools:text="2 april"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvCompletion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin"
+                android:visibility="gone"
+                android:text="Курс завершен"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/GreenButton"
+                android:id="@+id/buttonStop"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin"
+                android:text="Завершить курс"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:paddingStart="@dimen/margin"
+            android:paddingEnd="@dimen/margin"
+            android:background="@drawable/block"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkNotificationsEnabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уведомления включены"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout"
+            android:id="@+id/analyseNotificationsLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:paddingStart="@dimen/big_margin"
+            android:paddingEnd="@dimen/big_margin"
+            android:background="@drawable/block"
+            android:elevation="2dp">
+
+            <TextView style="@style/TitleText"
+                android:layout_marginTop="12dp"
+                android:text="Уведомления об анализах"/>
+
+            <LinearLayout style="@style/HorizontalLinearLayout"
+                android:layout_marginBottom="@dimen/small_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Уведомить за "/>
+
+                <EditText android:id="@+id/etCountDays"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="0"
+                    android:hint="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" дней до анализа"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/RedButton"
+            android:id="@+id/buttonDelete"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:text="Удалить курс"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

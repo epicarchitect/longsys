@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/LinearLayout">
+
+    <Spinner android:id="@+id/spinnerGroup"
+        style="@style/Spinner"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/big_margin"/>
+
+    <Spinner android:id="@+id/spinnerType"
+        style="@style/Spinner"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/big_margin"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayout"
+        android:id="@+id/etCountLayout"
+        android:layout_margin="@dimen/margin"
+        android:hint="Дозировка">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/TextInputEditText"
+            android:id="@+id/etCount"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout style="@style/LinearLayout"
+        android:background="@drawable/block"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:elevation="2dp">
+
+        <TextView android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Время приема"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonTime"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin"
+            style="@style/BlueButton"
+            android:text="10:30"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout"
+        android:background="@drawable/block"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:elevation="2dp">
+
+        <LinearLayout style="@style/HorizontalLinearLayout">
+
+            <LinearLayout style="@style/LinearLayout"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Начало приема"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonTimeStart"
+                    style="@style/BlueButton"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_gravity="center"
+                    android:text="2 april 2020"/>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/LinearLayout"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Конец приема"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonTimeEnd"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin"
+                    style="@style/BlueButton"
+                    android:text="2 april 2020"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout"
+        android:background="@drawable/block"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:elevation="2dp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Периодичность"/>
+
+        <LinearLayout style="@style/LinearLayout">
+
+            <Spinner style="@style/Spinner"
+                android:id="@+id/spinnerDays"/>
+
+            <LinearLayout style="@style/HorizontalLinearLayout"
+                android:visibility="gone"
+                android:id="@+id/customDaysLayout"
+                android:layout_margin="@dimen/margin">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:hint="Дней приема"
+                    android:id="@+id/etActiveDaysLayout"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEditText"
+                        android:id="@+id/etActiveDays"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:hint="Дней перерыва"
+                    android:id="@+id/etStopDaysLayout"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextInputEditText"
+                        android:id="@+id/etStopDays"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

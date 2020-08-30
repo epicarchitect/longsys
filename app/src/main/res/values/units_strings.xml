@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ampoules">Ампулы</string>
+    <string name="vials">Виалы</string>
+    <string name="flacons">Флаконы</string>
+    <string name="injection">Инъекции</string>
+    <string name="capsules">Капсулы</string>
+    <string name="tablets">Таблетки</string>
+    <string name="things">Штуки</string>
+    <string name="grams">Граммы</string>
+    <string name="milligrams">Миллиграммы</string>
+    <string name="milliliters">Миллилитры</string>
+    <string name="units">Единицы</string>
+    <string name="me">ME</string>
+
+    <string name="grams_short">гр.</string>
+    <string name="milliliters_short">мл.</string>
+    <string name="milligrams_short">мг.</string>
+    <string name="units_short">ед.</string>
+
+</resources>

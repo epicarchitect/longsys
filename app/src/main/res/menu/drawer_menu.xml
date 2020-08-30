@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/analyseGroupsFragment"
+            android:icon="@drawable/ic_analyses"
+            android:title="@string/analyses" />
+
+        <item
+            android:id="@+id/coursesFragment"
+            android:icon="@drawable/ic_my_course"
+            android:title="@string/my_courses" />
+
+        <item
+            android:id="@+id/aboutFragment"
+            android:icon="@drawable/ic_info"
+            android:title="@string/about_course" />
+
+        <item
+            android:id="@+id/dietFragment"
+            android:icon="@drawable/ic_diet"
+            android:title="@string/diet" />
+
+        <item
+            android:id="@+id/cbjuFragment"
+            android:icon="@drawable/ic_cbju"
+            android:title="Расчет КБЖУ" />
+
+        <item
+            android:id="@+id/faqFragment"
+            android:icon="@drawable/ic_faq"
+            android:title="@string/faq" />
+
+        <item
+            android:id="@+id/consultationFragment"
+            android:icon="@drawable/ic_person"
+            android:title="@string/consultation" />
+
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem"
+    android:layout_margin="@dimen/small_margin"
+    android:padding="@dimen/margin"
+    android:orientation="horizontal">
+
+    <TextView style="@style/TitleText"
+        android:id="@+id/tvDate"
+        android:layout_weight="1"
+        tools:text="Name"/>
+
+    <TextView style="@style/SecondaryText"
+        android:id="@+id/tvActive"
+        android:textColor="@color/green"
+        android:layout_width="wrap_content"
+        android:text="@string/current"/>
+
+</LinearLayout>

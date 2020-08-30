@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="drug_group_0">Анаболические стероиды</string>
+    <string name="drug_group_1">Ингибиторы ароматазы</string>
+    <string name="drug_group_2">Антиэстрогены</string>
+    <string name="drug_group_3">Гормон роста</string>
+    <string name="drug_group_4">Аптечные препараты</string>
+    <string name="drug_group_5">БАДы</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout">
+
+    <TextView style="@style/TitleText"
+        android:id="@+id/tvMessage"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="@dimen/big_margin"
+        android:text="@string/confirm_message"/>
+
+    <FrameLayout style="@style/FrameLayout"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/RedBorderlessButton"
+            android:id="@+id/buttonNo"
+            android:text="@string/no" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/GreenBorderlessButton"
+            android:id="@+id/buttonYes"
+            android:layout_gravity="end"
+            android:text="@string/yes" />
+
+    </FrameLayout>
+
+</LinearLayout>

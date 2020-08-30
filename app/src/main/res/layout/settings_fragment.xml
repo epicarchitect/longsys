@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/LinearLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:background="@drawable/block"
+        android:elevation="2dp">
+
+        <TextView style="@style/TitleText"
+            android:layout_margin="@dimen/margin"
+            android:text="Цвет приложения"/>
+
+        <RadioGroup android:id="@+id/radioThemes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/light"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dark"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:background="@drawable/block"
+        android:elevation="2dp">
+
+        <TextView style="@style/TitleText"
+            android:layout_margin="@dimen/margin"
+            android:text="Цвет-акцент"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView android:id="@+id/buttonBlue"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/blue"
+                tools:src="@drawable/ic_done"
+                android:padding="@dimen/margin"
+                android:layout_margin="@dimen/margin"/>
+
+            <ImageView android:id="@+id/buttonGreen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/green"
+                android:padding="@dimen/margin"
+                android:layout_margin="@dimen/margin"/>
+
+            <ImageView android:id="@+id/buttonYellow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/yellow"
+                android:padding="@dimen/margin"
+                android:layout_margin="@dimen/margin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/FrameLayout"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/GreenButton"
+        android:id="@+id/buttonSave"
+        android:text="@string/save"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/big_margin"/>
+
+</LinearLayout>

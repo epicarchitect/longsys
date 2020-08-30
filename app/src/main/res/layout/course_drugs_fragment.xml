@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FrameLayout">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="85dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/course_drug_item"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="@style/FAB"
+        android:visibility="gone"
+        android:id="@+id/fab"/>
+
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ListItem" parent="LinearLayout">
+        <item name="android:background">@drawable/block</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:stateListAnimator">@animator/on_click</item>
+    </style>
+
+    <style name="TitleText" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.0125</item>
+    </style>
+
+    <style name="SecondaryText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
+    </style>
+
+    <style name="FAB">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@animator/on_click</item>
+        <item name="srcCompat">@drawable/ic_add</item>
+        <item name="tint">@color/white</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="borderWidth">0dp</item>
+        <item name="android:backgroundTint">?attr/colorAccent</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:layout_margin">@dimen/big_margin</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
