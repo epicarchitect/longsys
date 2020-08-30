@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="longsys.bb35.extreme.bulk.max">
+    package="longsys">
 
     <uses-permission android:name="android.permission.ACTION_LOCKED_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -13,10 +13,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name="application.App"
+        android:name="longsys.App"
         android:theme="@style/Launcher">
 
-        <activity android:name="application.ui.MainActivity"
+        <activity android:name="longsys.ui.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="application.ui.CourseDrugEventDialogActivity"
+        <activity android:name="longsys.ui.CourseDrugEventDialogActivity"
             android:noHistory="true"
             android:launchMode="singleTask"
             android:taskAffinity=""
@@ -34,7 +34,7 @@
             tools:ignore="LockedOrientationActivity"
             android:theme="@style/BlueLightDialog"/>
 
-        <activity android:name="application.ui.CourseAnalyseEventDialogActivity"
+        <activity android:name="longsys.ui.CourseAnalyseEventDialogActivity"
             android:launchMode="singleTask"
             android:taskAffinity=""
             android:noHistory="true"
@@ -43,19 +43,19 @@
             tools:ignore="LockedOrientationActivity"
             android:theme="@style/BlueLightDialog"/>
 
-        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.CurrentCourseDrugEventsNotifier"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.OnClickReceiver"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.DoneReceiver"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.drugs.PutOffReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.CurrentCourseDrugEventsNotifier"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.OnClickReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.DoneReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.PutOffReceiver"/>
 
-        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.before.CurrentCourseAnalyseEventsBeforeNotifier"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.CurrentCourseAnalyseEventsNotifier"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.OnClickReceiver"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.DoneReceiver"/>
-        <receiver android:name="application.controllers.courses.current_course.notifications.analyses.PutOffReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.analyses.before.CurrentCourseAnalyseEventsBeforeNotifier"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.analyses.CurrentCourseAnalyseEventsNotifier"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.analyses.OnClickReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.analyses.DoneReceiver"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.analyses.PutOffReceiver"/>
 
         <receiver
-            android:name="application.controllers.restarting.BootReceiver"
+            android:name="longsys.controllers.restarting.BootReceiver"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true"

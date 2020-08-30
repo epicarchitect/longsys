@@ -6,12 +6,12 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="application.ui.pages.MainFragment"
+        android:name="longsys.ui.pages.MainFragment"
         tools:layout="@layout/main_fragment" />
 
     <fragment
         android:id="@+id/analyseGroupsFragment"
-        android:name="application.ui.pages.analyse_groups.AnalyseGroupsFragment"
+        android:name="longsys.ui.pages.analyse_groups.AnalyseGroupsFragment"
         android:label="@string/analyses"
         tools:layout="@layout/analyse_groups_fragment">
 
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/analysesFragment"
-        android:name="application.ui.pages.analyses.AnalysesFragment"
+        android:name="longsys.ui.pages.analyses.AnalysesFragment"
         tools:layout="@layout/analyse_types_fragment" >
 
         <argument android:defaultValue="-1"
@@ -38,38 +38,38 @@
 
     <fragment
         android:id="@+id/dietFragment"
-        android:name="application.ui.pages.diet.DietFragment"
+        android:name="longsys.ui.pages.diet.DietFragment"
         android:label="@string/diet"
         tools:layout="@layout/diet_fragment"/>
 
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="application.ui.pages.settings.SettingsFragment"
+        android:name="longsys.ui.pages.settings.SettingsFragment"
         android:label="@string/settings"
         tools:layout="@layout/settings_fragment"/>
 
     <fragment
         android:id="@+id/consultationFragment"
-        android:name="application.ui.pages.consultation.ConsultationFragment"
+        android:name="longsys.ui.pages.consultation.ConsultationFragment"
         android:label="@string/consultation"
         tools:layout="@layout/consultation_fragment"/>
 
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="application.ui.pages.about.AboutFragment"
+        android:name="longsys.ui.pages.about.AboutFragment"
         android:label="@string/about_course"
         tools:layout="@layout/about_fragment"/>
 
     <fragment
         android:id="@+id/faqFragment"
-        android:name="application.ui.pages.faq.FaqFragment"
+        android:name="longsys.ui.pages.faq.FaqFragment"
         android:label="@string/faq"
         tools:layout="@layout/faq_fragment"/>
 
     <fragment
         android:id="@+id/coursesFragment"
-        android:name="application.ui.pages.courses.CoursesFragment"
+        android:name="longsys.ui.pages.courses.CoursesFragment"
         android:label="@string/my_courses"
         tools:layout="@layout/courses_fragment">
 
@@ -84,7 +84,7 @@
 
     <fragment
         android:id="@+id/courseFragment"
-        android:name="application.ui.pages.courses.course.CourseFragment"
+        android:name="longsys.ui.pages.courses.course.CourseFragment"
         tools:layout="@layout/course_fragment" >
 
         <argument android:defaultValue="-1"
@@ -95,7 +95,7 @@
 
     <fragment
         android:id="@+id/cbjuFragment"
-        android:name="application.ui.pages.cbju.CbjuFragment"
+        android:name="longsys.ui.pages.cbju.CbjuFragment"
         android:label="Расчет КБЖУ"
         tools:layout="@layout/cbju_fragment" />
 
