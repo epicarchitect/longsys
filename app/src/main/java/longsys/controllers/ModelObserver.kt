@@ -2,7 +2,7 @@ package longsys.controllers
 
 class ModelObserver<M> {
 
-    val listeners = HashMap<Int, ArrayList<(M) -> Unit>>()
+    private val listeners = HashMap<Int, ArrayList<(M) -> Unit>>()
 
     fun notify(key: Int, model: M) =
         listeners[key]?.forEach {
