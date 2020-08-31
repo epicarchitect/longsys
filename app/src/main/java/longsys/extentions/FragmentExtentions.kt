@@ -34,6 +34,6 @@ fun Fragment.showViews(vararg views: View) {
     views.forEach { it.show() }
 }
 
-fun Fragment.app(): App = App.instance!!
+fun Any.app(): App = App.instance!!
 
 fun DialogFragment.show(f: Fragment) = show(f.parentFragmentManager, "")

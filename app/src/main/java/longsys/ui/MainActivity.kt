@@ -16,6 +16,7 @@ import longsys.controllers.restarting.RestartController
 import longsys.controllers.settings.SettingsController
 import longsys.ui.pages.MainFragment
 import longsys.ui.pages.consent.ConsentFragment
+import longsys.ui.pages.rate.RateDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         setTheme(SettingsController(this).getSettings().themeId())
         setContentView(R.layout.activity_main)
         checkConsent()
+        checkRateDialog()
 
         setSupportActionBar(toolbar)
 
@@ -49,6 +51,11 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(navigationView, navController)
 
         RestartController(this).restart()
+    }
+
+    fun checkRateDialog() {
+        if (RateDialog.needOpen())
+            RateDialog().show(supportFragmentManager, null)
     }
 
     fun checkConsent() {
