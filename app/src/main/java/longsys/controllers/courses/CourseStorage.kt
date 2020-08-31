@@ -57,13 +57,13 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Оксиментол
-            -22,
+        add( // Метандростенолон
+            -21,
             7,
             45,
             1,
             1,
-            50.0,
+            20.0,
             18,
             0
         )
