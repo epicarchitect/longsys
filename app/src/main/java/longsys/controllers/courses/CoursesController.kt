@@ -7,11 +7,13 @@ import longsys.extentions.hour
 import longsys.extentions.millisecond
 import longsys.extentions.minute
 import longsys.extentions.second
+import java.util.*
 
 class CoursesController private constructor(val context: Context) {
 
     val repository = CoursesRepository(context)
     val mapper = Mapper()
+    val firstCourseInstallationTimeStorage = FirstCourseInstallationTimeStorage(context)
 
     fun save(model: CourseModel) =
         repository.save(
@@ -32,9 +34,19 @@ class CoursesController private constructor(val context: Context) {
                 )
             )
         ).let {
+            if (firstCourseInstallationTimeStorage.isEmpty()) {
+                val startDayTime = Calendar.getInstance().run {
+                    millisecond(0)
+                    second(0)
+                    minute(0)
+                    hour(0)
+                    timeInMillis
+                }
+                firstCourseInstallationTimeStorage.save(startDayTime)
+            }
             mapper.toModel(it)
         }
-    
+
     fun delete(model: CourseModel) =
         repository.delete(mapper.toEntity(model))
 
@@ -57,6 +69,8 @@ class CoursesController private constructor(val context: Context) {
         repository.getEntityById(id)?.let {
             mapper.toModel(it)
         }
+
+    fun getFirstCourseInstallationTime() = firstCourseInstallationTimeStorage.get()
 
     companion object {
         var instance: CoursesController? = null
