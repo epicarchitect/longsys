@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId 'longsys.bb35.plus.bulk.max'
+        applicationId 'longsys.pl35.power.max'
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 3

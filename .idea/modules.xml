@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="longsys/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/longsys.iml" filepath="$PROJECT_DIR$/.idea/modules/longsys.iml" group="longsys" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/longsys.iml" filepath="$PROJECT_DIR$/.idea/modules/longsys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/longsys.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/longsys.app.iml" />
     </modules>
   </component>
 </project>
