@@ -21,7 +21,9 @@ class CurrentCourseController private constructor(val context: Context) {
     val liveCurrentCourse = MutableLiveData<CourseModel?>()
 
     init {
-        update()
+        coursesController.getLiveCourses().observeForever {
+            update()
+        }
     }
 
     fun update() {

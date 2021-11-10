@@ -72,11 +72,7 @@ class CurrentCourseAnalyseEventsBeforeNotifier : BroadcastReceiver() {
                 context,
                 event.id,
                 intent,
-                PendingIntent.FLAG_UPDATE_CURRENT.let {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-                        it or PendingIntent.FLAG_IMMUTABLE
-                    else it
-                }
+                PendingIntent.FLAG_UPDATE_CURRENT
             )
             manager.setExactCompat(time, pendingIntent)
         }
