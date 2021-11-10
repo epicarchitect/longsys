@@ -28,7 +28,11 @@ class NotificationSender(val context: Context) {
             Intent(context, OnClickReceiver::class.java).apply {
                 putExtra(OnClickReceiver.EVENT_ID, event.id)
             },
-            PendingIntent.FLAG_CANCEL_CURRENT
+            PendingIntent.FLAG_CANCEL_CURRENT.let {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    it or PendingIntent.FLAG_IMMUTABLE
+                else it
+            }
         )
 
         val pendingIntentOnDone = PendingIntent.getBroadcast(
@@ -37,7 +41,11 @@ class NotificationSender(val context: Context) {
             Intent(context, DoneReceiver::class.java).apply {
                 putExtra(DoneReceiver.EVENT_ID, event.id)
             },
-            PendingIntent.FLAG_CANCEL_CURRENT
+            PendingIntent.FLAG_CANCEL_CURRENT.let {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    it or PendingIntent.FLAG_IMMUTABLE
+                else it
+            }
         )
 
         val pendingIntentOnPutOff = PendingIntent.getBroadcast(
@@ -46,7 +54,11 @@ class NotificationSender(val context: Context) {
             Intent(context, PutOffReceiver::class.java).apply {
                 putExtra(PutOffReceiver.EVENT_ID, event.id)
             },
-            PendingIntent.FLAG_CANCEL_CURRENT
+            PendingIntent.FLAG_CANCEL_CURRENT.let {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    it or PendingIntent.FLAG_IMMUTABLE
+                else it
+            }
         )
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)

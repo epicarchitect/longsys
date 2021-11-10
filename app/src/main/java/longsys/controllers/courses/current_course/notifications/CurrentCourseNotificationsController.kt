@@ -55,8 +55,21 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
             val drugEvents = drugEventsController.getEvents(id, timeStart.timeInMillis, timeEnd.timeInMillis)
             val analyseEvents = analyseEventsController.getEvents(id, timeStart.timeInMillis, timeEnd.timeInMillis)
 
-            drugEvents.forEach { install(it) }
-            analyseEvents.forEach { install(it) }
+            var installed = 0
+
+            analyseEvents.forEach {
+                if (!it.isCompleted && !it.isNotified && installed < 100) {
+                    installed++
+                    install(it)
+                }
+            }
+
+            drugEvents.forEach {
+                if (!it.isCompleted && !it.isNotified && installed < 400) {
+                    installed++
+                    install(it)
+                }
+            }
         }
     }
 

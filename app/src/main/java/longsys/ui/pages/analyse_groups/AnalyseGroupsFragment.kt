@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -37,11 +38,7 @@ class AnalyseGroupsFragment : Fragment() {
 
         listAdapter.onClickShow { model ->
             if (findNavController().currentDestination?.id == R.id.analyseGroupsFragment) {
-                val action =
-                    AnalyseGroupsFragmentDirections.actionAnalyseGroupsFragmentToAnalysesFragment(
-                        model.id
-                    )
-                findNavController().navigate(action)
+                findNavController().navigate(R.id.analysesFragment, bundleOf("groupId" to model.id))
                 activity?.title = model.name
             }
         }

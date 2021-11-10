@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACTION_LOCKED_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
@@ -18,6 +19,7 @@
 
         <activity android:name="longsys.ui.MainActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +31,7 @@
             android:noHistory="true"
             android:launchMode="singleTask"
             android:taskAffinity=""
+            android:exported="true"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
@@ -37,13 +40,14 @@
         <activity android:name="longsys.ui.CourseAnalyseEventDialogActivity"
             android:launchMode="singleTask"
             android:taskAffinity=""
+            android:exported="true"
             android:noHistory="true"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             android:theme="@style/BlueLightDialog"/>
 
-        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.CurrentCourseDrugEventsNotifier"/>
+        <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.CurrentCourseDrugEventsNotifier" />
         <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.OnClickReceiver"/>
         <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.DoneReceiver"/>
         <receiver android:name="longsys.controllers.courses.current_course.notifications.drugs.PutOffReceiver"/>

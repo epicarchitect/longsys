@@ -43,7 +43,7 @@ class CourseFragment : Fragment() {
         controller = CoursesController(app())
         retainInstance = true
 
-        val courseId = arguments?.let { CourseFragmentArgs.fromBundle(it).courseId } ?: VOID_ID
+        val courseId = arguments?.getInt("courseId") ?: VOID_ID
 
         tabLayout.isSmoothScrollingEnabled = true
         tab0 = tabLayout.newTab().setText(R.string.preparations)

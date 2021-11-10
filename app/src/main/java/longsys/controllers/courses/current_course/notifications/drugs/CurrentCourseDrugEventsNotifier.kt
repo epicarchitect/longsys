@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import longsys.constants.VOID_ID
 import longsys.controllers.course_drug_events.CourseDrugEventModel
 import longsys.controllers.course_drug_events.CourseDrugEventsController
@@ -51,14 +52,33 @@ class CurrentCourseDrugEventsNotifier : BroadcastReceiver() {
             val intent = Intent(context, CurrentCourseDrugEventsNotifier::class.java).apply {
                 putExtra(EVENT_ID, event.id)
             }
-            val pendingIntent = PendingIntent.getBroadcast(context, event.id, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+            val pendingIntent = PendingIntent.getBroadcast(
+                context,
+                event.id,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT.let {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                        it or PendingIntent.FLAG_IMMUTABLE
+                    else it
+                }
+            )
             manager.setExactCompat(event.time.timeInMillis, pendingIntent)
         }
 
         fun cancel(context: Context, event: CourseDrugEventModel) {
             val manager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val intent = Intent(context, CurrentCourseDrugEventsNotifier::class.java)
-            val pendingIntent = PendingIntent.getBroadcast(context, event.id, intent, PendingIntent.FLAG_NO_CREATE)
+            val pendingIntent = PendingIntent.getBroadcast(
+                context,
+                event.id,
+                intent,
+                PendingIntent.FLAG_NO_CREATE.let {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                        it or PendingIntent.FLAG_IMMUTABLE
+                    else it
+                }
+            )
+
             if (pendingIntent != null) {
                 manager.cancel(pendingIntent)
                 pendingIntent.cancel()

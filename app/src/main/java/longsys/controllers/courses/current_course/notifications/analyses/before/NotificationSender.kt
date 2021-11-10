@@ -32,7 +32,11 @@ class NotificationSender(val context: Context) {
             Intent(context, OnClickReceiver::class.java).apply {
                 putExtra(OnClickReceiver.EVENT_ID, event.id)
             },
-            PendingIntent.FLAG_CANCEL_CURRENT
+            PendingIntent.FLAG_CANCEL_CURRENT.let {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    it or PendingIntent.FLAG_IMMUTABLE
+                else it
+            }
         )
 
         val startDay = event.time.copy {

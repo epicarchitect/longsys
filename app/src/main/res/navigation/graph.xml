@@ -29,11 +29,6 @@
         android:id="@+id/analysesFragment"
         android:name="longsys.ui.pages.analyses.AnalysesFragment"
         tools:layout="@layout/analyse_types_fragment" >
-
-        <argument android:defaultValue="-1"
-            android:name="groupId"
-            app:argType="integer"/>
-
     </fragment>
 
     <fragment
@@ -86,11 +81,6 @@
         android:id="@+id/courseFragment"
         android:name="longsys.ui.pages.courses.course.CourseFragment"
         tools:layout="@layout/course_fragment" >
-
-        <argument android:defaultValue="-1"
-            android:name="courseId"
-            app:argType="integer"/>
-
     </fragment>
 
     <fragment

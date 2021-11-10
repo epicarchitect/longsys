@@ -22,12 +22,7 @@ class AnalysesFragment : Fragment() {
 
     lateinit var controller: AnalysesController
 
-    val groupId get() = arguments?.let {
-        AnalysesFragmentArgs.fromBundle(
-            it
-        ).groupId
-    } ?: VOID_ID
-
+    val groupId get() = arguments?.getInt("groupId") ?: VOID_ID
 
     @SuppressLint("UseRequireInsteadOfGet")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
