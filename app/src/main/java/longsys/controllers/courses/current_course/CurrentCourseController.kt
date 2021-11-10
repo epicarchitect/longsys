@@ -19,7 +19,7 @@ class CurrentCourseController private constructor(val context: Context) {
         CoursesController(
             context
         )
-    val liveCurrentCourseId = MutableLiveData<Int?>()
+    val liveCurrentCourseId = MutableLiveData<Int?>(getCurrentCourseId())
     val liveCurrentCourse = Transformations.switchMap(liveCurrentCourseId) {
         if (it == null) MutableLiveData<CourseModel?>(null)
         else coursesController.getLiveCourseById(it)
@@ -32,7 +32,10 @@ class CurrentCourseController private constructor(val context: Context) {
     }
 
     fun update() {
-        liveCurrentCourseId.value = getCurrentCourseId()
+        val id = getCurrentCourseId()
+        if (liveCurrentCourseId.value != id) {
+            liveCurrentCourseId.value =  id
+        }
     }
 
     fun complete() {

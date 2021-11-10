@@ -2,6 +2,7 @@ package longsys.controllers.courses.current_course.notifications
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import longsys.controllers.course_analyse_events.CourseAnalyseEventModel
 import longsys.controllers.course_analyse_events.CourseAnalyseEventsController
 import longsys.controllers.course_drug_events.CourseDrugEventModel
@@ -18,7 +19,7 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
     val currentCourseController = CurrentCourseController(context)
 
     init {
-        currentCourseController.liveCurrentCourse.observeForever {
+        currentCourseController.liveCurrentCourseId.observeForever {
             reinstallNotifications()
         }
 
@@ -51,7 +52,6 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
     }
 
     fun reinstallNotifications() {
-        Log.d("test123", "reinstallNotifications")
         val currentCourseId = CurrentCourseController(context).getCurrentCourseId()
         CoursesController(context).getCourseById(currentCourseId)?.run {
             val drugEvents = drugEventsController.getEvents(id, timeStart.timeInMillis, timeEnd.timeInMillis)
@@ -66,7 +66,6 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
                 if (installed < 100) {
                     installed++
                     install(it)
-                    Log.d("test123", "installed analyse $installed")
                 }
             }
 
@@ -74,7 +73,6 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
                 if (installed < 400) {
                     installed++
                     install(it)
-                    Log.d("test123", "installed drug $installed")
                 }
             }
         }
