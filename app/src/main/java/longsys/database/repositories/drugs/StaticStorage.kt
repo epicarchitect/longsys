@@ -39,7 +39,7 @@ object StaticStorage {
 
             item(-20, -3, R.string.drug_type_8_name, R.string.drug_type_8_desc, ME),
             item(-19, -3, R.string.drug_type_9_name, R.string.drug_type_9_desc),
-            item(-18, -3, R.string.drug_type_10_name, R.string.drug_type_10_desc, FLACONS),
+            item(-18, -3, R.string.drug_type_10_name, R.string.drug_type_10_desc, MILLIGRAMS),
             item(-17, -3, R.string.drug_type_11_name, R.string.drug_type_11_desc, MILLIGRAMS),
             item(-16, -3, R.string.drug_type_12_name, R.string.drug_type_12_desc, CAPSULES),
             item(-15, -3, R.string.drug_type_13_name, R.string.drug_type_13_desc, UNITS),
@@ -53,10 +53,10 @@ object StaticStorage {
             item(-8, -2, R.string.drug_type_20_name, R.string.drug_type_20_desc, CAPSULES),
             item(-7, -2, R.string.drug_type_21_name, R.string.drug_type_21_desc, CAPSULES),
             item(-6, -2, R.string.drug_type_22_name, R.string.drug_type_22_desc, TABLETS),
-            item(-5, -2, R.string.drug_type_27_name, R.string.drug_type_27_desc, TABLETS),
-            item(-4, -2, R.string.drug_type_28_name, R.string.drug_type_28_desc, TABLETS),
-            item(-3, -2, R.string.drug_type_29_name, R.string.drug_type_29_desc, TABLETS),
-            item(-2, -2, R.string.drug_type_30_name, R.string.drug_type_30_desc, TABLETS)
+            item(-5, -2, R.string.drug_type_27_name, R.string.drug_type_27_desc, ME),
+            item(-4, -2, R.string.drug_type_28_name, R.string.drug_type_28_desc, MILLIGRAMS),
+            item(-3, -2, R.string.drug_type_29_name, R.string.drug_type_29_desc, MILLIGRAMS),
+            item(-2, -2, R.string.drug_type_30_name, R.string.drug_type_30_desc, MILLIGRAMS)
         )
     }
 

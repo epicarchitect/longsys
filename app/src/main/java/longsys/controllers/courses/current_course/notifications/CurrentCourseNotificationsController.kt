@@ -25,17 +25,29 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
             .observe(CourseAnalyseEventsController.DELETE) { cancel(it) }
     }
 
-    fun install(event: CourseDrugEventModel) =
-        CurrentCourseDrugEventsNotifier.install(context, event)
+    fun install(event: CourseDrugEventModel) {
+        runCatching {
+            CurrentCourseDrugEventsNotifier.install(context, event)
+        }
+    }
 
-    fun install(event: CourseAnalyseEventModel) =
-        CurrentCourseAnalyseEventsNotifier.install(context, event)
+    fun install(event: CourseAnalyseEventModel) {
+        runCatching {
+            CurrentCourseAnalyseEventsNotifier.install(context, event)
+        }
+    }
 
-    fun cancel(event: CourseDrugEventModel) =
-        CurrentCourseDrugEventsNotifier.cancel(context, event)
+    fun cancel(event: CourseDrugEventModel) {
+        runCatching {
+            CurrentCourseDrugEventsNotifier.cancel(context, event)
+        }
+    }
 
-    fun cancel(event: CourseAnalyseEventModel) =
-        CurrentCourseAnalyseEventsNotifier.cancel(context, event)
+    fun cancel(event: CourseAnalyseEventModel) {
+        runCatching {
+            CurrentCourseAnalyseEventsNotifier.cancel(context, event)
+        }
+    }
 
     fun reinstallNotifications() {
         val currentCourseId = CurrentCourseController(context).getCurrentCourseId()

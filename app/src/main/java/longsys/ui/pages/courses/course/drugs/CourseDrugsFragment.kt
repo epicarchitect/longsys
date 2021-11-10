@@ -1,9 +1,11 @@
 package longsys.ui.pages.courses.course.drugs
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -69,6 +71,7 @@ class CourseDrugsFragment : Fragment() {
         fab.setOnClickListener {}
 
         listAdapter.onClick { model, _ ->
+            Log.d("test123", model.toString())
             val dialog = CourseDrugDialog.build(model)
             dialog.setModeView()
             dialog.isImmutable = true
