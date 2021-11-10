@@ -15,27 +15,4 @@ class AboutFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
         inflater.inflate(R.layout.about_fragment, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        colorizeText1()
-        colorizeText19()
-        colorizeText25()
-        colorizeText27()
-        colorizeText28()
-    }
-
-    fun colorizeText1() = text1.colorize(93, 164, blue())
-
-    fun colorizeText19() = text19.colorize(75, 128, red())
-
-    fun colorizeText25() = text25.colorize(260, 315, red())
-
-    fun colorizeText27() = text27.colorize(196, 200, red())
-
-    fun colorizeText28() = text28.colorize(80, 101, red())
-
-    fun blue() = ContextCompat.getColor(requireContext(), R.color.blue)
-
-    fun red() = ContextCompat.getColor(requireContext(), R.color.red)
-
 }
