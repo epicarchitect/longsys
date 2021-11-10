@@ -27,7 +27,7 @@ class CurrentCourseFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         controller = CurrentCourseController(app())
 
-        controller.getLiveCurrentCourse().observe(viewLifecycleOwner, Observer { course ->
+        controller.liveCurrentCourse.observe(viewLifecycleOwner, Observer { course ->
             if (course == null) {
                 val creationFragment = CourseCreationFragment {
                     val dialog = ProgressDialog.show(context, "Пожалуйста подождите", "Устанавливаем курс")

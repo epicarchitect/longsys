@@ -29,29 +29,13 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
     fun install(event: CourseDrugEventModel) {
         runCatching {
             CurrentCourseDrugEventsNotifier.install(context, event)
-        }.fold(
-            onSuccess = {
-                Log.d("test123", "install drug success")
-            },
-            onFailure = {
-                it.printStackTrace()
-                Log.d("test123", "install drug fail")
-            }
-        )
+        }
     }
 
     fun install(event: CourseAnalyseEventModel) {
         runCatching {
             CurrentCourseAnalyseEventsNotifier.install(context, event)
-        }.fold(
-            onSuccess = {
-                Log.d("test123", "install Analyse success")
-            },
-            onFailure = {
-                it.printStackTrace()
-                Log.d("test123", "install Analyse fail")
-            }
-        )
+        }
     }
 
     fun cancel(event: CourseDrugEventModel) {
@@ -67,6 +51,7 @@ class CurrentCourseNotificationsController private constructor(val context: Cont
     }
 
     fun reinstallNotifications() {
+        Log.d("test123", "reinstallNotifications")
         val currentCourseId = CurrentCourseController(context).getCurrentCourseId()
         CoursesController(context).getCourseById(currentCourseId)?.run {
             val drugEvents = drugEventsController.getEvents(id, timeStart.timeInMillis, timeEnd.timeInMillis)

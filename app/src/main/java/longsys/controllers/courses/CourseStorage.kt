@@ -318,7 +318,7 @@ class CourseStorage(val course: CourseModel) {
         CourseAnalyseGroupModel(
             course = course,
             name = "Анализы до курса",
-            time = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 3).copy {
+            time = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 2).copy {
                 hour(8)
                 minute(0)
                 second(0)

@@ -3,6 +3,7 @@ package longsys.controllers.courses.current_course
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.work.*
 import longsys.constants.COUNT_DAYS_IN_COURSE
 import longsys.constants.VOID_ID
@@ -18,7 +19,11 @@ class CurrentCourseController private constructor(val context: Context) {
         CoursesController(
             context
         )
-    val liveCurrentCourse = MutableLiveData<CourseModel?>()
+    val liveCurrentCourseId = MutableLiveData<Int?>()
+    val liveCurrentCourse = Transformations.switchMap(liveCurrentCourseId) {
+        if (it == null) MutableLiveData<CourseModel?>(null)
+        else coursesController.getLiveCourseById(it)
+    }
 
     init {
         coursesController.getLiveCourses().observeForever {
@@ -27,14 +32,8 @@ class CurrentCourseController private constructor(val context: Context) {
     }
 
     fun update() {
-        val id = getCurrentCourseId()
-        liveCurrentCourse.value = when {
-            id != VOID_ID -> coursesController.getCourseById(id)
-            else -> null
-        }
+        liveCurrentCourseId.value = getCurrentCourseId()
     }
-
-    fun getLiveCurrentCourse() = liveCurrentCourse as LiveData<CourseModel?>
 
     fun complete() {
         setCurrentCourseId(VOID_ID)

@@ -74,7 +74,7 @@ class TodayFragment : Fragment() {
             MainFragment.showMyCourse()
         }
 
-        currentCourseController.getLiveCurrentCourse().observe(viewLifecycleOwner, Observer { course ->
+        currentCourseController.liveCurrentCourse.observe(viewLifecycleOwner, Observer { course ->
             if (course == null) {
                 courseNotCreatedLayout.show()
                 onEmptyLayout.hide()
