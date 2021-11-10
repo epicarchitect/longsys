@@ -34,21 +34,21 @@ class CourseInstallationWorker(context: Context, parameters: WorkerParameters) :
             storage.beforeCourseAnalyseGroup().let {
                 val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.beforeCourseAnalyses(group).forEach { analyse ->
-                    courseAnalysesController.save(analyse.copy(id = -idCounter.nextId()))
+                    courseAnalysesController.save(analyse)
                 }
             }
 
             storage.onCourseAnalyseGroup().let {
                 val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.onCourseAnalyses(group).forEach { analyse ->
-                    courseAnalysesController.save(analyse.copy(id = -idCounter.nextId()))
+                    courseAnalysesController.save(analyse)
                 }
             }
 
             storage.afterCourseAnalyseGroup().let {
                 val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.afterCourseAnalyses(group).forEach { analyse ->
-                    courseAnalysesController.save(analyse.copy(id = -idCounter.nextId()))
+                    courseAnalysesController.save(analyse)
                 }
             }
 
