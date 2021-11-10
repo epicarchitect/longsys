@@ -1,5 +1,6 @@
 package longsys.ui.pages.analyse_groups
 
+import android.util.Log
 import kotlinx.android.synthetic.main.analyses_group_dialog.*
 import longsys.R
 import longsys.controllers.analyse_groups.AnalyseGroupModel

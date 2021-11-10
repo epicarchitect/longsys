@@ -95,7 +95,7 @@ class CourseAnalysesFragment : Fragment() {
 
             onClick { model, _ ->
                 val dialog = CourseAnalyseGroupDialog.build(model)
-                dialog.isImmutable = !isMutable
+                dialog.isImmutable = model.isImmutable
                 dialog.setModeView()
                 dialog.show(parentFragmentManager, "")
             }

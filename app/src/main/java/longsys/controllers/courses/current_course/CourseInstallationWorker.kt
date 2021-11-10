@@ -9,6 +9,7 @@ import longsys.controllers.course_analyses.CourseAnalysesController
 import longsys.controllers.course_drugs.CourseDrugsController
 import longsys.controllers.courses.CourseStorage
 import longsys.controllers.courses.CoursesController
+import longsys.database.repositories.IdCounter
 
 class CourseInstallationWorker(context: Context, parameters: WorkerParameters) : Worker(context, parameters) {
 
@@ -19,6 +20,7 @@ class CourseInstallationWorker(context: Context, parameters: WorkerParameters) :
             val courseDrugsController = CourseDrugsController(applicationContext)
             val courseAnalysesController = CourseAnalysesController(applicationContext)
             val courseAnalyseGroupsController = CourseAnalyseGroupsController(applicationContext)
+            val idCounter = IdCounter(applicationContext)
 
             val storage = CourseStorage(course)
 
@@ -30,21 +32,21 @@ class CourseInstallationWorker(context: Context, parameters: WorkerParameters) :
             }
 
             storage.beforeCourseAnalyseGroup().let {
-                val group = courseAnalyseGroupsController.save(it)
+                val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.beforeCourseAnalyses(group).forEach { analyse ->
                     courseAnalysesController.save(analyse)
                 }
             }
 
             storage.onCourseAnalyseGroup().let {
-                val group = courseAnalyseGroupsController.save(it)
+                val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.onCourseAnalyses(group).forEach { analyse ->
                     courseAnalysesController.save(analyse)
                 }
             }
 
             storage.afterCourseAnalyseGroup().let {
-                val group = courseAnalyseGroupsController.save(it)
+                val group = courseAnalyseGroupsController.save(it.copy(id = -idCounter.nextId()))
                 storage.afterCourseAnalyses(group).forEach { analyse ->
                     courseAnalysesController.save(analyse)
                 }

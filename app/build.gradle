@@ -5,24 +5,18 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId 'longsys.pl35.power.max'
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 3
         versionName '3'
     }
 
     buildTypes {
-        debug {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
         release {
             minifyEnabled true
             shrinkResources true

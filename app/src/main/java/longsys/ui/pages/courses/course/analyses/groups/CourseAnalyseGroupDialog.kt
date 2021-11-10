@@ -1,5 +1,6 @@
 package longsys.ui.pages.courses.course.analyses.groups
 
+import android.util.Log
 import kotlinx.android.synthetic.main.course_analyse_group_dialog.*
 import longsys.R
 import longsys.controllers.course_analyse_groups.CourseAnalyseGroupModel
@@ -46,6 +47,7 @@ class CourseAnalyseGroupDialog : ModelDialog<CourseAnalyseGroupModel>() {
 
     override fun setViewsByModel() {
         etName.setText(model.name)
+        Log.d("test123", model.toString())
         model.time.run {
             setTime(hour(), minute())
             setDate(day(), month(), year())
