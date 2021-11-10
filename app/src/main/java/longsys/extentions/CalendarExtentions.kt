@@ -105,3 +105,10 @@ fun Calendar.isToday(): Boolean {
 
     return today in startDay until endDay
 }
+
+fun calendarEndOfToday() = Calendar.getInstance().apply {
+    millisecond(999)
+    second(59)
+    minute(59)
+    hour(23)
+}

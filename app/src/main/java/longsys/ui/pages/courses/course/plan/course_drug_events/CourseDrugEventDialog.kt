@@ -2,7 +2,14 @@ package longsys.ui.pages.courses.course.plan.course_drug_events
 
 import android.annotation.SuppressLint
 import kotlinx.android.synthetic.main.base_model_dialog.*
+import kotlinx.android.synthetic.main.course_analyse_event_dialog.*
 import kotlinx.android.synthetic.main.course_drug_event_dialog.*
+import kotlinx.android.synthetic.main.course_drug_event_dialog.buttonDate
+import kotlinx.android.synthetic.main.course_drug_event_dialog.buttonDone
+import kotlinx.android.synthetic.main.course_drug_event_dialog.buttonTime
+import kotlinx.android.synthetic.main.course_drug_event_dialog.tvDone
+import kotlinx.android.synthetic.main.course_drug_event_dialog.tvNotDone
+import kotlinx.android.synthetic.main.course_drug_event_dialog.tvTitle
 import longsys.R
 import longsys.constants.UnitType
 import longsys.controllers.course_drug_events.CourseDrugEventModel
@@ -150,8 +157,13 @@ class CourseDrugEventDialog : ModelDialog<CourseDrugEventModel>() {
             tvNotDone.show()
         }
 
-        buttonDone.show()
-        etCountLayout.show()
+        if (selectedDate.timeInMillis <= calendarEndOfToday().timeInMillis) {
+            buttonDone.show()
+            etCountLayout.enable()
+        } else {
+            buttonDone.hide()
+            etCountLayout.disable()
+        }
         tvTitle.text = model.courseDrug.drug.name
     }
 

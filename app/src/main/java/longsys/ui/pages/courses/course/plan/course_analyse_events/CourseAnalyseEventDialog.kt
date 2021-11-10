@@ -174,8 +174,13 @@ class CourseAnalyseEventDialog : ModelDialog<CourseAnalyseEventModel>() {
             tvNotDone.show()
         }
 
-        buttonDone.show()
-        etCommentLayout.show()
+        if (selectedDate.timeInMillis <= calendarEndOfToday().timeInMillis) {
+            buttonDone.show()
+            etCommentLayout.show()
+        } else {
+            buttonDone.hide()
+            etCommentLayout.hide()
+        }
     }
 
     companion object {
