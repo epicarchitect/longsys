@@ -152,8 +152,6 @@ class CourseSettingsFragment : Fragment() {
                 val dialog = ProgressDialog.show(context, "Пожалуйста подождите", "Переустаналиваем курс")
 
                 currentCourseController.changeTimeEnd(time) { course, _ ->
-                    buttonTimeStart.text = course.timeStart.dateTextWithoutYear()
-                    buttonTimeEnd.text = course.timeEnd.dateTextWithoutYear()
                     dialog.cancel()
                 }
 
