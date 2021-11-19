@@ -270,7 +270,7 @@ class CourseStorage(val course: CourseModel) {
             CourseDrugModel(
                 drug = DrugModel(-3),
                 course = course,
-                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 122),
+                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 126),
                 timeEnd = course.timeEnd,
                 activeDays = 1,
                 stopDays = 0,
@@ -284,7 +284,7 @@ class CourseStorage(val course: CourseModel) {
             CourseDrugModel(
                 drug = DrugModel(-5),
                 course = course,
-                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 122),
+                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 126),
                 timeEnd = course.timeEnd,
                 activeDays = 1,
                 stopDays = 0,
@@ -298,7 +298,7 @@ class CourseStorage(val course: CourseModel) {
             CourseDrugModel(
                 drug = DrugModel(-4),
                 course = course,
-                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 122),
+                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 126),
                 timeEnd = course.timeEnd,
                 activeDays = 1,
                 stopDays = 0,
@@ -312,7 +312,7 @@ class CourseStorage(val course: CourseModel) {
             CourseDrugModel(
                 drug = DrugModel(-18),
                 course = course,
-                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 140),
+                timeStart = calendarByTime(course.timeStart.timeInMillis + COUNT_MILLIS_IN_DAY * 144),
                 timeEnd = course.timeEnd,
                 activeDays = 1,
                 stopDays = 0,
