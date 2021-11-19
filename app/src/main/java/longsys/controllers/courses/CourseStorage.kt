@@ -35,7 +35,7 @@ class CourseStorage(val course: CourseModel) {
                 )
             )
 
-        add( // Тестостерон пропинат +
+        add( // Тестостерон пропинат
             -32,
             7,
             7,
@@ -46,7 +46,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Мастерон пропионат +
+        add( // Мастерон пропионат
             -29,
             7,
             7,
@@ -57,7 +57,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Оксиметолон +
+        add( // Оксиметолон
             -27,
             7,
             89,
@@ -68,7 +68,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Тестостерон ципионат +
+        add( // Тестостерон ципионат
             -30,
             7,
             82,
@@ -79,7 +79,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Дростанолон энантат +
+        add( // Дростанолон энантат
             -28,
             7,
             82,
@@ -90,7 +90,29 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Анастразол +
+        add( // Тестостерон пропинат
+            -32,
+            9,
+            9,
+            1,
+            0,
+            100.0,
+            7,
+            0
+        )
+
+        add( // Мастерон пропионат
+            -29,
+            9,
+            9,
+            1,
+            0,
+            50.0,
+            7,
+            0
+        )
+
+        add( // Анастразол
             -24,
             11,
             17,
@@ -101,7 +123,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Анастразол +
+        add( // Анастразол
             -24,
             19,
             81,
@@ -112,7 +134,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Анастразол +
+        add( // Анастразол
             -24,
             83,
             89,
@@ -123,7 +145,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // ХГЧ +
+        add( // ХГЧ
             -20,
             42,
             54,
@@ -134,7 +156,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // ХГЧ +
+        add( // ХГЧ
             -20,
             70,
             82,
@@ -145,7 +167,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Тестостерон пропионат +
+        add( // Тестостерон пропионат
             -32,
             85,
             85,
@@ -156,7 +178,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Мастерон пропионат +
+        add( // Мастерон пропионат
             -29,
             85,
             85,
@@ -167,7 +189,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Тестостерон пропионат +
+        add( // Тестостерон пропионат
             -32,
             87,
             89,
@@ -178,18 +200,18 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Мастерон пропионат +
+        add( // Мастерон пропионат
             -29,
             87,
             89,
             1,
             1,
-            100.0,
+            50.0,
             7,
             0
         )
 
-        add( // Кломифен +
+        add( // Кломифен
             -23,
             94,
             107,
@@ -200,18 +222,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Трибулус +
-            -2,
-            94,
-            121,
-            1,
-            0,
-            8000.0,
-            21,
-            0
-        )
-
-        add( // Трибулус +
+        add( // Трибулус
             -2,
             94,
             121,
@@ -233,7 +244,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Тамоксифен +
+        add( // Тамоксифен
             -22,
             108,
             121,
@@ -244,7 +255,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        add( // Тамоксифен +
+        add( // Тамоксифен
             -22,
             122,
             149,
@@ -255,7 +266,7 @@ class CourseStorage(val course: CourseModel) {
             0
         )
 
-        list.add( // Прегненолон +
+        list.add( // Прегненолон
             CourseDrugModel(
                 drug = DrugModel(-3),
                 course = course,
@@ -269,7 +280,7 @@ class CourseStorage(val course: CourseModel) {
             )
         )
 
-        list.add( // Витамин D +
+        list.add( // Витамин D
             CourseDrugModel(
                 drug = DrugModel(-5),
                 course = course,
