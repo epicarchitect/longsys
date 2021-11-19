@@ -257,7 +257,7 @@ class CourseStorage(val course: CourseModel) {
 
         add( // Тамоксифен
             -22,
-            122,
+            126,
             149,
             1,
             0,
