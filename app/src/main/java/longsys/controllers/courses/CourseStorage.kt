@@ -274,7 +274,7 @@ class CourseStorage(val course: CourseModel) {
                 timeEnd = course.timeEnd,
                 activeDays = 1,
                 stopDays = 0,
-                count = 5.0,
+                count = 50.0,
                 hour = 21,
                 minute = 0
             )
